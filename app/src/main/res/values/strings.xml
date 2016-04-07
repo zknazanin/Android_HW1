@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">FNApp</string>
     <string name="about">درباره ما</string>
+    <string name="saveGame">ذخیره بازی</string>
+    <string name="newGame">بازی جدید</string>
+    <string name="saved_x_default">saved_x</string>
+    <string name="saved_x">saved_x</string>
+    <string name="saved_y">saved_y</string>
+    <string name="firstrun">firstRun</string>
+    <string name="file">AndroidPrj1</string>
 </resources>
