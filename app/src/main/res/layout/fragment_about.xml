@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dp"
+    android:layout_height="350dp"
+    android:background="@color/myColor"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+   <TextView android:layout_height="100dp"
+       android:layout_width="300dp"
+       android:text="
+       زهرا کاکاوند 91106224
+          فروغ السادات میرکریم زاده تفتی 91105693"
+       >
+   </TextView>
+    </LinearLayout>
+</LinearLayout>

@@ -30,4 +30,5 @@
         <item>@color/violet</item>
         <item>@color/magenta</item>
     </array>
+    <color name="myColor">#F1A0A0</color>
 </resources>
