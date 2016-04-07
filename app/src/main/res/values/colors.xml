@@ -15,6 +15,7 @@
     <color name="blue">#0000FF</color>
     <color name="violet">#7F00FF</color>
     <color name="magenta">#FF00FF</color>
+    <color name="player">#74CDDD</color>
 
     <array name="rainbow">
         <item>@color/bright_pink</item>
