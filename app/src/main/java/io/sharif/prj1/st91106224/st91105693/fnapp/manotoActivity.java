@@ -14,10 +14,6 @@ import android.text.TextPaint;
 import android.text.style.CharacterStyle;
 import android.text.style.UpdateAppearance;
 import android.app.Dialog;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -27,7 +23,6 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
@@ -48,7 +43,6 @@ public class manotoActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         sharedPref = getPreferences(Context.MODE_PRIVATE);
         editor = sharedPref.edit();
-
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotation);
         anim = (ImageView) findViewById(R.id.myImage1);
         anim.setAnimation(animation);
@@ -58,6 +52,7 @@ public class manotoActivity extends AppCompatActivity {
         up = (ImageView) findViewById(R.id.up);
         right = (ImageView) findViewById(R.id.right);
         down = (ImageView) findViewById(R.id.down);
+        // forough
         centerX = player.getTranslationX();
         centerY = player.getTranslationY();
         player.setTranslationX(sharedPref.getFloat(getString(R.string.saved_x),centerX));
@@ -89,7 +84,7 @@ public class manotoActivity extends AppCompatActivity {
                 popup.show();
             }
         });
-
+        // zahra
         displayMetrics = getResources().getDisplayMetrics();
 
         LinearLayout firstLayout = (LinearLayout)findViewById(R.id.first);
@@ -130,7 +125,7 @@ public class manotoActivity extends AppCompatActivity {
         });
 
     }
-
+    // forough
     private void ToastShow(MenuItem item) {
         SpannableString spanString = new SpannableString(item.getTitle());
         spanString.setSpan(new RainBowSpan(this), 0, item.getTitle().length(), 0);
@@ -148,7 +143,7 @@ public class manotoActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
+    @Override // zahra
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -163,7 +158,7 @@ public class manotoActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
+    // forough
     private static class RainBowSpan extends CharacterStyle implements UpdateAppearance {
         private final int[] colors;
 
@@ -182,6 +177,7 @@ public class manotoActivity extends AppCompatActivity {
             paint.setShader(shader);
         }
     }
+    // zahra
     private void createDialogGuide() {
         Dialog dialog = new Dialog(manotoActivity.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
