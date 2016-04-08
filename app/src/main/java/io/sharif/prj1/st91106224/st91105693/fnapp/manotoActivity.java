@@ -94,6 +94,8 @@ public class manotoActivity extends AppCompatActivity {
         right.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                Log.e("Player y",""+player.getY());
+                Log.e("heightPixels",""+displayMetrics.heightPixels);
                 if (player.getX() < 2 * displayMetrics.widthPixels / 5)
                     player.setX(player.getX() + 5);
                 return true;
@@ -102,6 +104,8 @@ public class manotoActivity extends AppCompatActivity {
         left.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                Log.e("Player y",""+player.getY());
+                Log.e("heightPixels",""+displayMetrics.heightPixels);
                 if (player.getX() > displayMetrics.widthPixels / 8 * -1)
                     player.setX(player.getX() - 5);
                 return true;
@@ -110,7 +114,9 @@ public class manotoActivity extends AppCompatActivity {
         up.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (player.getY() > displayMetrics.heightPixels / 5)
+                Log.e("Player y",""+player.getY());
+                Log.e("heightPixels",""+displayMetrics.heightPixels);
+                if (player.getY() > 0)
                     player.setY(player.getY() - 5);
                 return true;
             }
@@ -118,7 +124,9 @@ public class manotoActivity extends AppCompatActivity {
         down.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (player.getY() < 3 * displayMetrics.heightPixels / 2)
+                Log.e("Player y",""+player.getY());
+                Log.e("heightPixels",""+displayMetrics.heightPixels);
+                if (player.getY() < 1 * displayMetrics.heightPixels / 3)
                     player.setY(player.getY() + 5);
                 return true;
             }
